@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Рассадка гостей — Владимир и Валерия</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Great+Vibes&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="seating.css" />
+</head>
+<body class="page-seating">
+  <div class="seat-wash" aria-hidden="true"></div>
+  <img class="seat-deco seat-deco--tl" src="assets/branch-left.png" alt="" aria-hidden="true" />
+  <img class="seat-deco seat-deco--tr" src="assets/branch.png" alt="" aria-hidden="true" />
+  <img class="seat-deco seat-deco--bl" src="assets/branch-left.png" alt="" aria-hidden="true" />
+  <img class="seat-deco seat-deco--br" src="assets/branch.png" alt="" aria-hidden="true" />
+
+  <header class="seat-top">
+    <a class="seat-back" href="index.html">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg>
+      К приглашению
+    </a>
+    <a href="index.html" class="seat-mark" aria-label="Владимир и Валерия">
+      <svg width="22" height="18" viewBox="0 0 28 24" fill="none" aria-hidden="true">
+        <path d="M14 21S3.5 14.2 3.5 8.8C3.5 6 5.6 4 8.2 4c2 0 3.7 1.2 5.8 3.4C16.1 5.2 17.8 4 19.8 4c2.6 0 4.7 2 4.7 4.8C24.5 14.2 14 21 14 21Z" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <a class="seat-rsvp" href="index.html#rsvp">RSVP</a>
+  </header>
+
+  <main class="seat-main">
+    <section class="seat-hero">
+      <p class="seat-hero__brand">Владимир <em>&amp;</em> Валерия</p>
+      <div class="seat-hero__ornament" aria-hidden="true">
+        <svg width="64" height="18" viewBox="0 0 56 18" fill="none">
+          <path d="M2 10c8-6 14-6 26 0s18 6 26 0" stroke="#9AA07C" stroke-width="1.1" stroke-linecap="round"/>
+          <path d="M20 7.5c1.8-2.8 4.2-3.4 5.6-1.2 1.5-2.4 4-1.7 5.2.8" stroke="#9AA07C" stroke-width="1" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <h1 class="seat-hero__title">Рассадка гостей</h1>
+      <p class="seat-hero__text">Найдите своё место за праздничным столом — введите имя или взгляните на схему зала.</p>
+
+      <div class="seat-finder">
+        <label class="seat-finder__label" for="seatSearch">Ваше имя</label>
+        <div class="seat-finder__bar">
+          <svg class="seat-finder__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16.2 16.2 20 20"/></svg>
+          <input id="seatSearch" class="seat-finder__input" type="text" autocomplete="off" placeholder="Например, Валерия" enterkeyhint="search" />
+          <button type="button" class="seat-finder__clear" id="seatClear" hidden aria-label="Сбросить">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+        <div class="seat-reveal" id="seatReveal" hidden></div>
+      </div>
+    </section>
+
+    <section class="seat-hall" aria-label="Схема рассадки">
+      <div class="seat-hall__head">
+        <p class="seat-hall__eyebrow">Схема зала</p>
+      </div>
+
+      <div class="seat-plan" id="seatPlan"></div>
+    </section>
+  </main>
+
+  <footer class="seat-foot">
+    <p>12 июня 2027 · Дубовая Столовая</p>
+    <a href="index.html">Вернуться к приглашению</a>
+  </footer>
+
+  <script src="seating.js"></script>
+</body>
+</html>
